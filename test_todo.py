@@ -2,6 +2,7 @@
 from playwright.sync_api import Playwright, sync_playwright, expect
 import pytest
 
+
 def test_add_todo(page) -> None:
     page.goto("https://demo.playwright.dev/todomvc/#/")
     page.get_by_role("textbox", name="What needs to be done?").click()
