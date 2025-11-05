@@ -2,7 +2,6 @@
 from playwright.sync_api import Playwright, sync_playwright, expect
 import pytest
 
-@pytest.mark.only_browser("firefox")
 def test_add_todo(page) -> None:
     page.goto("https://demo.playwright.dev/todomvc/#/")
     page.get_by_role("textbox", name="What needs to be done?").click()
@@ -12,7 +11,7 @@ def test_add_todo(page) -> None:
 
 
 # def test_add_todo(playwright: Playwright) -> None:
-#     browser = playwright.chromium.launch(headless=False, slow_mo=500)
+#     browser = playwright.chromium.launch(headless=False,P slow_mo=500)
 #     context = browser.new_context()
 #     page = context.new_page()
 #     page.goto("https://demo.playwright.dev/todomvc/#/")
