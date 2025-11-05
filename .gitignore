@@ -6,6 +6,9 @@ venv*/
 .env
 .venv
 
+# Playwright test results
+test-results/
+
 # Файлы кэша Python
 __pycache__/
 *.py[cod]
